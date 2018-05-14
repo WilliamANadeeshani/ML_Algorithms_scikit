@@ -3,7 +3,6 @@ from sklearn.tree import DecisionTreeRegressor
 
 house_data = pd.read_csv('./train.csv')
 
-
 print("================================= indexing ===================================")
 
 # print columns
@@ -15,7 +14,6 @@ print(house_data.SalePrice.head())
 # Pick any two variables and store them to a new DataFrame use describe to summarize the data
 heatData = ['Heating', 'HeatingQC']
 print (house_data[heatData].describe())
-
 
 print("================================= modeling ===================================")
 # prediction target==y
@@ -33,7 +31,6 @@ my_model = DecisionTreeRegressor()
 my_model.fit(X, y)
 
 print(my_model)
-
 
 print("================================= prediction ===================================")
 print("Making predictions for the following 5 houses:")
