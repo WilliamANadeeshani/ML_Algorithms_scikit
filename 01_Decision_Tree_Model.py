@@ -37,3 +37,6 @@ print("Making predictions for the following 5 houses:")
 print(X.head())
 print("The predictions are")
 print(my_model.predict(X.head()))
+
+
+
