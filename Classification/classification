@@ -1,0 +1,33 @@
+ In classification you have a set of predefined classes and want to know which class a new object belongs to.
+ Examples:
+    assigning a given email to the "spam" or "non-spam" class
+    assigning a diagnosis to a given patient based on observed characteristics of the patient (gender)
+
+ classification is considered an instance of supervised learning --> where a training set of correctly identified observations is available
+
+Supervised Learning
+    1. Classification
+    2. Linear regression
+
+Regression:
+1. simple linear regression -->
+    There is one dimension for the response variable and another dimension for the explanatory variable, making a total of two dimensions
+    y = α + β x (α & β are the the parameters  of the model that are learned by the learning algorithms)
+    best fitting model is called "ordinary least squares" or "linear least squares".
+
+    Evaluating:
+        model.score(X_test, y_test)
+
+2. Multiple Linear Regression
+    y = α + β1 x 1 + β 2 x2 + ⋅⋅⋅ + βn xn
+
+3. Polynomial regression
+    y = α + β1 x + β2 x2
+
+* Regularization is a collection of techniques that can be used to prevent over-fitting.
+* Occam's razor states that a hypothesis with the fewest assumptions is the best.
+* Accordingly, regularization attempts to find the simplest model that explains the data.
+
+
+
+

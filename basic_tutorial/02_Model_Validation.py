@@ -3,7 +3,7 @@ from sklearn.tree import DecisionTreeRegressor
 from sklearn.metrics import mean_absolute_error
 from sklearn.model_selection import train_test_split
 
-house_data = pd.read_csv('./train.csv')
+house_data = pd.read_csv('./Data/train.csv')
 print("================================= modeling ===================================")
 # prediction target==y
 y = house_data.SalePrice

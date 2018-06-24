@@ -1,7 +1,7 @@
 import pandas as pd
 from sklearn.tree import DecisionTreeRegressor
 
-house_data = pd.read_csv('./train.csv')
+house_data = pd.read_csv('./Data/train.csv')
 
 print("================================= indexing ===================================")
 
