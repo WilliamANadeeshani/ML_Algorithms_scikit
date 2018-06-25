@@ -1,6 +1,6 @@
 ML Basic Algorithms
 
-************************************************Classification************************************************************************
+***********************Classification*************************
 
 
 * In classification you have a set of predefined classes and want to know which class a new object belongs to.
@@ -33,7 +33,7 @@ Regression:
         * Occam's razor states that a hypothesis with the fewest assumptions is the best.
         * Accordingly, regularization attempts to find the simplest model that explains the data.
 
-*********************************************** Pre Processing *************************************************************************
+********************* Pre Processing ****************************
 
 extracting features from categorical variables
 extracting features from text
@@ -63,7 +63,7 @@ extracting features from text
             Lemmatization is the process of determining the lemma, or the morphological root, of an inflected word based on its context. --> use lexical resource
             Stemming removes all patterns of characters that appear to be affixes, resulting in a token that is not necessarily a valid word. --> use rules
 
-****************************************************Perceptron********************************************************************
+***********************Perceptron*********************************
 
 The perceptron's preactivation.
     y = φ  ∑ wi xi + b 
