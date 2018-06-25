@@ -11,7 +11,7 @@ print(house_data.columns)
 # Use the head command to print first lines the top few lines of the price
 print(house_data.SalePrice.head())
 
-# Pick any two variables and store them to a new DataFrame use describe to summarize the data
+# Pick any two variables and store them to a new DataFrame use describe to summarize the X_Train
 heatData = ['Heating', 'HeatingQC']
 print (house_data[heatData].describe())
 
@@ -27,7 +27,7 @@ X = house_data[price_predictors]
 # define model - What type of model will it be
 my_model = DecisionTreeRegressor()
 
-# fit_model - Capture patterns from provided data
+# fit_model - Capture patterns from provided X_Train
 my_model.fit(X, y)
 
 print(my_model)

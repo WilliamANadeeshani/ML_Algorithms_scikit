@@ -1,9 +1,90 @@
 ML Basic Algorithms
 
-1. Classification
-    a. Regression
-            linear-regression
-            multiple-linear regression
-            polynomial-regression
+************************************************Classification************************************************************************
 
-2.Pre Processing
+
+* In classification you have a set of predefined classes and want to know which class a new object belongs to.
+  Examples:
+    assigning a given email to the "spam" or "non-spam" class
+    assigning a diagnosis to a given patient based on observed characteristics of the patient (gender)
+
+*classification is considered an instance of supervised learning --> where a training set of correctly identified observations is available
+
+Supervised Learning
+    1. Classification
+    2. Linear regression
+
+Regression:
+        1. simple linear regression -->
+            There is one dimension for the response variable and another dimension for the explanatory variable, making a total of two dimensions
+            y = α + β x (α & β are the the parameters  of the model that are learned by the learning algorithms)
+            best fitting model is called "ordinary least squares" or "linear least squares".
+
+            Evaluating:
+                model.score(X_test, y_test)
+
+        2. Multiple Linear Regression
+            y = α + β1 x 1 + β 2 x2 + ⋅⋅⋅ + βn xn
+
+        3. Polynomial regression
+            y = α + β1 x + β2 x2
+
+        * Regularization is a collection of techniques that can be used to prevent over-fitting.
+        * Occam's razor states that a hypothesis with the fewest assumptions is the best.
+        * Accordingly, regularization attempts to find the simplest model that explains the data.
+
+*********************************************** Pre Processing *************************************************************************
+
+extracting features from categorical variables
+extracting features from text
+
+    Features:
+        categorical / nominal / continuous
+
+    Feature Encoding:
+        categorical --> one-of-K or one-hot --> order is important --> cities
+        bag of word --> uses a feature vector with an element for each of the words in the corpus's vocabulary to represent each document.
+        bag-of-words with TF-IDF weights -->  create feature vectors that encode the frequencies of words
+            we can see that words that are common to many of the documents in the corpus, such as sandwich, have been penalized.
+        Space-efficient feature vectorizing with the hashing trick
+
+
+
+    High-dimensional feature vectors that have many zero-valued elements are called sparse vectors.
+    problems:
+        The first problem is that high-dimensional vectors require more memory than smaller vectors.
+        The second problem is known as the curse of dimensionality, or the Hughes effect.
+            As the feature space's dimensionality increases,
+            more training data is required to ensure that there are enough training instances with each combination of the feature's values.
+
+    solutions:
+        1. stop word filtering
+        2. Stemming and lemmatization
+            Lemmatization is the process of determining the lemma, or the morphological root, of an inflected word based on its context. --> use lexical resource
+            Stemming removes all patterns of characters that appear to be affixes, resulting in a token that is not necessarily a valid word. --> use rules
+
+****************************************************Perceptron********************************************************************
+
+The perceptron's preactivation.
+    y = φ  ∑ wi xi + b 
+    1. unit function
+    2.logistic sigmoid activation function.
+        g ( x ) = 1/(1+e-x)
+
+The perceptron learning algorithm
+    1. begins by setting the weights to zero or to small random values.
+        it is an error-driven learning algorithm -->
+            if the prediction is correct, the algorithm continues to the next instance.
+            If the prediction is incorrect, the algorithm updates the weights.
+
+        wi( t + 1) = wi( t ) + α( dj − yj( t ) ) xji ; for all feature 0 ≤ i ≤ n
+            dj is the true class for instance j
+            yj( t ) is the predicted class for instance j
+            xji ,i is the value of the ith explanatory variable for instance j
+            α is a hyperparameter that controls the learning rate
+
+
+
+
+
+

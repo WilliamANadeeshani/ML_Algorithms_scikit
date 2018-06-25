@@ -16,7 +16,7 @@ X = house_data[price_predictors]
 # define model - What type of model will it be
 my_model = DecisionTreeRegressor()
 
-# fit_model - Capture patterns from provided data
+# fit_model - Capture patterns from provided X_Train
 my_model.fit(X, y)
 
 print(my_model)
@@ -32,8 +32,8 @@ print("================================= calculate error =======================
 MAE = mean_absolute_error(y, prediction_prices)
 print(MAE)
 
-print("================================== resize the data set and run ==========================")
-# split data into training and validation data, for both predictors and target
+print("================================== resize the X_Train set and run ==========================")
+# split X_Train into training and validation X_Train, for both predictors and target
 # The split is based on a random number generator. Supplying a numeric value to
 # the random_state argument guarantees we get the same split every time we
 # run this script.
